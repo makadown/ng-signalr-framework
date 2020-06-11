@@ -9,6 +9,8 @@ import { SignalRServiceService } from './services/signal-rservice.service';
 export class AppComponent {
   title = 'ng-cliente-signalr-framework';
   constructor(private signalRService: SignalRServiceService) {
-    this.signalRService.initializeSignalRConnection()
-    }
+    setTimeout(() => {
+      this.signalRService.initializeSignalRConnection()
+    }, 1500);
+  }
 }
